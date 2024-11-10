@@ -146,3 +146,59 @@ Each of these libraries has its own strengths:
 - **NLTK**: Good for learning NLP and simpler tasks.
 
 These tools offer a variety of tokenization approaches and support different NLP tasks, so choosing the right one depends on your specific needs and the language or model you’re working with.
+
+
+
+# Hands-On Example: Using a Tokenizer
+
+This section provides a practical example of how to use a tokenizer with code. Tokenizers are essential for preparing text data so the model can understand and process it.
+
+## Using Hugging Face's `AutoTokenizer`
+
+In this example, we use the `AutoTokenizer` class from the Hugging Face Transformers library, which provides an easy-to-use interface for loading various pretrained tokenizers.
+
+### Step-by-Step Code Example
+
+Let's walk through encoding (converting text to tokens) and decoding (converting tokens back to text).
+
+```python
+from transformers import AutoTokenizer
+
+# Initialize a tokenizer for GPT-2
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
+
+# Example text
+text = "Hello, how are you?"
+
+# Encoding: convert text to tokens (numbers)
+tokens = tokenizer.encode(text)
+print("Tokens:", tokens)
+
+# Decoding: convert tokens back to text
+decoded_text = tokenizer.decode(tokens)
+print("Decoded Text:", decoded_text)
+```
+
+### Explanation
+
+1. **Initialize the Tokenizer**: We load the tokenizer for the GPT-2 model with `AutoTokenizer.from_pretrained("gpt2")`. This fetches a pretrained tokenizer specifically designed for the GPT-2 model.
+2. **Encoding (Text to Tokens)**: The `encode()` method takes the input text (`text`) and converts it into tokens (numerical representations). This is what the model uses to understand the input.
+3. **Decoding (Tokens to Text)**: The `decode()` method takes the tokens generated and converts them back into readable text. This is helpful for interpreting the model's output.
+
+### Expected Output
+
+Running the code will output something like:
+
+```
+Tokens: [15496, 11, 703, 389, 345]
+Decoded Text: Hello, how are you?
+```
+
+Notice that each word (or punctuation) in the sentence has a corresponding token number that the model can understand. When decoded, it returns to the original text.
+
+### Why This Matters
+
+- **Encoding** helps the model understand your text by breaking it down into parts it recognizes.
+- **Decoding** allows you to see what the model produced in human-readable text.
+
+This example demonstrates a basic way to prepare and interpret text data using a tokenizer, a key step when working with any language model.
