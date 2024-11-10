@@ -202,3 +202,10 @@ Notice that each word (or punctuation) in the sentence has a corresponding token
 - **Decoding** allows you to see what the model produced in human-readable text.
 
 This example demonstrates a basic way to prepare and interpret text data using a tokenizer, a key step when working with any language model.
+
+
+
+# Common Challenges in Tokenization
+- Handling special characters, emojis, or non-English languages.
+- How tokenization varies across languages (like languages without spaces between words).
+- The trade-off between token length and model memory.
