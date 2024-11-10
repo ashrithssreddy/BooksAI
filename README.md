@@ -1,1 +1,1 @@
-# BooksAI
+# Books AI - Book Recommendation App
