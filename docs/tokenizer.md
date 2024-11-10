@@ -209,3 +209,19 @@ This example demonstrates a basic way to prepare and interpret text data using a
 - Handling special characters, emojis, or non-English languages.
 - How tokenization varies across languages (like languages without spaces between words).
 - The trade-off between token length and model memory.
+
+
+# Glossary
+
+This glossary covers key terms related to tokenization and helps clarify their roles in working with language models.
+
+- **Vocabulary**: The complete list of tokens that the model can recognize. Each token in the vocabulary is a piece of a word, a whole word, or sometimes a punctuation mark that the tokenizer uses to break down text.
+
+- **Token ID**: A unique number assigned to each token in the vocabulary. When the tokenizer converts text to tokens, it translates each token into its corresponding Token ID so the model can process it.
+
+- **Special Tokens**: Specific tokens with defined purposes, used to help the model understand different parts of input or output. Examples include:
+    - `[PAD]`: Used for padding, which helps align sequences of different lengths.
+    - `[CLS]`: Often used in classification tasks to indicate the start of a sequence.
+    - `[SEP]`: Used to separate sequences, especially useful when the model is working with multiple pieces of text (like question-answer pairs).
+
+Understanding these terms helps you navigate tokenization and better understand how models work with text.
